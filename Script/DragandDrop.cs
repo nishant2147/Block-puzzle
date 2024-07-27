@@ -74,8 +74,8 @@ public class DragandDrop : MonoBehaviour
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-            *//*Vector2 scaleUp = new Vector2(bigblock.localScale.x + 1f, bigblock.localScale.y + 1f);
-            bigblock.localScale = scaleUp*//*
+            //Vector2 scaleUp = new Vector2(bigblock.localScale.x + 1f, bigblock.localScale.y + 1f);
+            bigblock.localScale = scaleUp;
 
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)

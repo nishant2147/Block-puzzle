@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-
     public static Grid instance;
 
     // Start is called before the first frame update
