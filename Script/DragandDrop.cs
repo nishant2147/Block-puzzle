@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DragandDrop : MonoBehaviour
 {
-    //private Transform bigblock;
+    private Transform bigblock;
     BlockPiece pressBlock;
 
     void Start()
     {
-        //bigblock = GetComponent<Transform>();
+        bigblock = GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -45,8 +45,8 @@ public class DragandDrop : MonoBehaviour
                     if (Grid.instance.isEmpty(pressBlock))
                     {
                         Grid.instance.placeBlock(pressBlock);
-                        //Grid.instance.placeBlock2(pressBlock);
 
+                        //Grid.instance.placeBlock2(pressBlock);
                         pressBlock = null;
                         return;
                     }

@@ -44,7 +44,7 @@ public class Grid : MonoBehaviour
         {
             var piece = block.transform.GetChild(i);
             Vector2Int pos = vectorToInt(piece.transform.position);
-            print("pos.x = " + pos.x + "     |    " + pos.y);
+            print("Position.x = " + pos.x + "     |    " + pos.y);
             if (fillBlock[pos.x, pos.y])
             {
                 return false;
@@ -83,5 +83,6 @@ public class Grid : MonoBehaviour
         Vector2Int pos = vectorToInt(block.transform.position);
         fillBlock[pos.x, pos.y] = piece;
         piece.transform.position = new Vector3(pos.x, pos.y);
+
     }*/
 }
