@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SpawnrandomBlock : MonoBehaviour
 {
-
+    float k;
     public GameObject[] blockPrefabs;
-    public int numberOfBlocksToSpawn = 3;
-    public Vector2 spawnAreaMin;
-    public Vector2 spawnAreaMax;
+    int numberOfBlocksToSpawn = 4;
+    /*public Vector2 spawnAreaMin;
+    public Vector2 spawnAreaMax;*/
 
     void Start()
     {
@@ -17,16 +17,23 @@ public class SpawnrandomBlock : MonoBehaviour
 
     void SpawnBlocks()
     {
-        for (int i = 0; i < numberOfBlocksToSpawn; i++)
+        for (int i = 1; i < numberOfBlocksToSpawn; i++)
         {
-            int randomIndex = Random.Range(0, blockPrefabs.Length);
-            GameObject blockPrefab = blockPrefabs[randomIndex];
+            if (i == 1)
+            {
+                k = 0.6f;
+            }
+            else if (i == 2)
+            {
+                k = 2.6f;
+            }
+            else if(i == 3)
+            {
+                k = 5f;
+            }
 
-            float randomX = Random.Range(spawnAreaMin.x, spawnAreaMax.x);
-            float randomY = Random.Range(spawnAreaMin.y, spawnAreaMax.y);
-            Vector2 spawnPosition = new Vector2(randomX, randomY);
-
-            Instantiate(blockPrefab, spawnPosition, Quaternion.identity);
+            var block = Instantiate(blockPrefabs[Random.Range(0, blockPrefabs.Length)],new Vector2(k,0),Quaternion.identity);
+            block.transform.SetParent(transform,false);
         }
     }
 }

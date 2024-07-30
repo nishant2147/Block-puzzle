@@ -647,9 +647,6 @@ MonoBehaviour:
   - {fileID: 7086467597019174283, guid: f66b70b8e4e7aa6479a8e8789798e8c8, type: 3}
   - {fileID: 2639325895204943200, guid: be969efb3cdcfe049b13c34b3ff28db9, type: 3}
   - {fileID: 5356523362619631062, guid: 2f17818384bab5b469f43de65ced1e39, type: 3}
-  numberOfBlocksToSpawn: 3
-  spawnAreaMin: {x: 0.5, y: 5}
-  spawnAreaMax: {x: -3, y: 0}
 --- !u!1 &1454582546
 GameObject:
   m_ObjectHideFlags: 0

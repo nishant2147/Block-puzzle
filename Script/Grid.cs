@@ -63,7 +63,7 @@ public class Grid : MonoBehaviour
     }*/
     private Vector2Int vectorToInt(Vector3 pos)
     {
-        return new Vector2Int((int)(pos.x + 0.5f), (int)(pos.y + 1f));
+        return new Vector2Int((int)(pos.x + 0.5f), (int)(pos.y + 0.5f));
     }
     internal void placeBlock(BlockPiece block)
     {
