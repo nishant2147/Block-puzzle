@@ -6,7 +6,6 @@ public class BlockPiece : MonoBehaviour
     internal bool blockPlaced = false;
     private Vector3 originalScale = new Vector3(0.5f,0.5f,0.5f);
     Vector3 largedScale = new Vector3(1f, 1f, 1f);
-    Vector3 smallScale = new Vector3(0.5f, 0.5f, 0.5f);
 
     internal void moveToOrignalPosition()
     {

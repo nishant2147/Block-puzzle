@@ -10,6 +10,8 @@ public class Grid : MonoBehaviour
     public int size;
     public GameObject tilePrefab;
 
+    int blockCount = 0;
+
     GameObject[,] baseBlock;
     GameObject[,] fillBlock;
     void Start()
@@ -19,7 +21,6 @@ public class Grid : MonoBehaviour
         instance = this;
         grid();
     }
-
     void grid()
     {
         for (int row = 0; row < size; row++)
