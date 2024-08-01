@@ -463,18 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505464235763b704999a10a78b80d489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPrefab:
-  - {fileID: 7086467597019174283, guid: f66b70b8e4e7aa6479a8e8789798e8c8, type: 3}
-  - {fileID: 2639325895204943200, guid: be969efb3cdcfe049b13c34b3ff28db9, type: 3}
-  - {fileID: 5356523362619631062, guid: 2f17818384bab5b469f43de65ced1e39, type: 3}
-  - {fileID: 1806763234091736134, guid: dcba5421c285ef94ea6faa83f62bbb0e, type: 3}
-  - {fileID: 6407554250476238721, guid: 25040d767cb36624b93bae08c85ee8bf, type: 3}
-  - {fileID: 1079453659752501097, guid: 051f2dbd5f3374e43a277eaa68204df6, type: 3}
-  - {fileID: 5488533857946845777, guid: 1418150896021984f8656ca38a9a2f4a, type: 3}
-  - {fileID: 2706078918802909396, guid: 4b0ae282083406c4fb883c20af059743, type: 3}
-  - {fileID: 5377128068436503925, guid: 7bee92af52d492c43a5fda694d84f06a, type: 3}
-  spawnPoints:
-  - {fileID: 1215141082}
   size: 10
   tilePrefab: {fileID: 6309686207163416194, guid: 7ba6f8176e0703b48b8a6a6531537256, type: 3}
 --- !u!1 &866827897
@@ -1056,7 +1044,7 @@ Transform:
   m_GameObject: {fileID: 2040768091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4765, y: -2.9641, z: 0}
+  m_LocalPosition: {x: 4.5, y: -3, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -25,7 +25,7 @@ public class SpawnrandomBlock : MonoBehaviour
             }
             else if (i == 2)
             {
-                k = 2.6f;
+                k = 2.7f;
             }
             else if(i == 3)
             {

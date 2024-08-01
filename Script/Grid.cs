@@ -1,5 +1,3 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Grid : MonoBehaviour
@@ -9,8 +7,6 @@ public class Grid : MonoBehaviour
     // Start is called before the first frame update
     public int size;
     public GameObject tilePrefab;
-
-    int blockCount = 0;
 
     GameObject[,] baseBlock;
     GameObject[,] fillBlock;
@@ -33,7 +29,6 @@ public class Grid : MonoBehaviour
             }
         }
     }
-
     internal bool inRange(Vector2 pos)
     {
         return pos.x > -0.5 && pos.y > -0.5 &&
