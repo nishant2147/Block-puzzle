@@ -6,8 +6,8 @@ public class SpawnrandomBlock : MonoBehaviour
 {
     float k;
     public GameObject[] blockPrefabs;
-    int numberOfBlocksToSpawn = 4;
-    /*public Vector2 spawnAreaMin;
+    int numberOfBlocksToSpawns = 4;
+   /* public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;*/
 
     void Start()
@@ -17,7 +17,7 @@ public class SpawnrandomBlock : MonoBehaviour
 
     void SpawnBlocks()
     {
-        for (int i = 1; i < numberOfBlocksToSpawn; i++)
+        for (int i = 1; i < numberOfBlocksToSpawns; i++)
         {
             if (i == 1)
             {

@@ -43,6 +43,7 @@ public class Grid : MonoBehaviour
             print("Position.x = " + pos.x + "     |    " + pos.y);
             if (fillBlock[pos.x, pos.y])
             {
+                print("block =" + fillBlock[pos.x,pos.y]);
                 return false;
             }
         }
