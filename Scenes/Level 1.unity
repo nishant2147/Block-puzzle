@@ -465,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 10
   tilePrefab: {fileID: 6309686207163416194, guid: 7ba6f8176e0703b48b8a6a6531537256, type: 3}
+  sprite: {fileID: -1730570800, guid: d13be874df381214196e0e3ec881a16f, type: 3}
 --- !u!1 &866827897
 GameObject:
   m_ObjectHideFlags: 0

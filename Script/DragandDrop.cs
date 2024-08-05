@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class DragandDrop : MonoBehaviour
 {
     private Transform bigblock;
     BlockPiece pressBlock;
+
+    Highlighter highlighter;
 
     void Start()
     {
@@ -54,6 +58,7 @@ public class DragandDrop : MonoBehaviour
                 pressBlock.moveToOrignalPosition();
             }
             pressBlock = null;
+            Grid.instance.clearHighlight();
         }
 
         if (Input.GetMouseButton(0))

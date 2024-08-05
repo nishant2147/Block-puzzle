@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Grid : MonoBehaviour
 {
@@ -7,6 +9,11 @@ public class Grid : MonoBehaviour
     // Start is called before the first frame update
     public int size;
     public GameObject tilePrefab;
+
+    [SerializeField]
+    //Color highlight;
+
+    public Sprite sprite;// Defaultimage;
 
     GameObject[,] baseBlock;
     GameObject[,] fillBlock;
@@ -29,6 +36,26 @@ public class Grid : MonoBehaviour
             }
         }
     }
+    public void Highlight(Vector2Int pos)
+    {
+        clearHighlight();
+        var blocks = baseBlock[pos.x, pos.y].GetComponent<SpriteRenderer>();
+        blocks.sprite = sprite;
+        blocks.transform.localScale = Vector3.one;
+    }
+    internal void clearHighlight()
+    {
+        for (int row = 0; row < size; row++)
+        {
+            for (int col = 0; col < size; col++)
+            {
+                var blocks = baseBlock[row, col].GetComponent<SpriteRenderer>();
+                blocks.sprite = null;
+                blocks.transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+        }
+    }
+
     internal bool inRange(Vector2 pos)
     {
         return pos.x > -0.5 && pos.y > -0.5 &&
@@ -43,10 +70,11 @@ public class Grid : MonoBehaviour
             print("Position.x = " + pos.x + "     |    " + pos.y);
             if (fillBlock[pos.x, pos.y])
             {
-                print("block =" + fillBlock[pos.x,pos.y]);
+                print("block ====> ");
                 return false;
             }
         }
+
         return true;
     }
     /*internal bool isempty(GameObject block2)
@@ -73,6 +101,8 @@ public class Grid : MonoBehaviour
             piece.transform.position = new Vector3(pos.x, pos.y);
         }
     }
+
+   
 
     /*internal void placeBlock(GameObject block)
     {
